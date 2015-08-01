@@ -49,8 +49,8 @@ h3 {
 
 footer {
     bottom: 0;
-    position: absolute;
     margin: 0 auto;
+    position: absolute;
 }
 
 section {
@@ -58,7 +58,7 @@ section {
 }
 
 .h_iframe {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 a:link {
@@ -153,16 +153,15 @@ a:active {
     right: 100%;
     margin-right: 6px;
 }
-
 /* Tooltip arrow styling/placement */
 [data-tooltip]:after {
-    content: '';
-    display: none;
-    position: absolute;
-    width: 0;
-    height: 0;
     border-color: transparent;
     border-style: solid;
+    content: '';
+    display: none;
+    height: 0;
+    position: absolute;
+    width: 0;
 }
 /* Dynamic horizontal centering for the tooltip */
 [data-tooltip-position="top"]:after, [data-tooltip-position="bottom"]:after {
@@ -176,18 +175,18 @@ a:active {
 }
 [data-tooltip-position="top"]:after {
     bottom: 100%;
-    border-width: 6px 6px 0;
     border-top-color: #000;
+    border-width: 6px 6px 0;
 }
 [data-tooltip-position="right"]:after {
     left: 100%;
-    border-width: 6px 6px 6px 0;
     border-right-color: #000;
+    border-width: 6px 6px 6px 0;
 }
 [data-tooltip-position="bottom"]:after {
     top: 100%;
-    border-width: 0 6px 6px;
     border-bottom-color: #000;
+    border-width: 0 6px 6px;
 }
 [data-tooltip-position="left"]:after {
     right: 100%;
@@ -214,7 +213,6 @@ a:active {
 
 ul {
     list-style: none;
-    /*margin: 0 0 0 15px;*/
     padding: 0;
 }
 
@@ -279,6 +277,7 @@ ul {
 .shy-menu-hamburger .layer.mid {
     top: 16px;
 }
+
 .is-open .shy-menu-hamburger .layer.mid {
     opacity: 0;
     left: 0;
@@ -286,6 +285,7 @@ ul {
 .shy-menu-hamburger .layer.btm {
     top: 23px;
 }
+
 .is-open .shy-menu-hamburger .layer.btm {
     top: 17px;
     left: 5px;
