@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* narrow style sheet
+ *
+ * background = firebrick (#B22222)
+ * font = cornsilk,orangered (#FFF8DC)
+ * links = cornsilk,darkkhaki,crimson,orangered (#FFF8DC,#BDB76B,#DC143C,#FF4500)
+ *
+ * */
+
+
+html {background-color: #B22222;}
+
+body {
+  color: #FFF8DC;
+  font-family: Consolas, Courier, monospace;
+  font-size: 90%;
+  margin: 10px 0px;
+  padding: 5px;
+}
+
+img {display: none;}
+
+/*
+ * to reduce the size of the youtube video.
+ * http://stackoverflow.com/questions/11122249/scale-iframe-css-width-100-like-an-image
+ */
+.wrapper {width:80%; max-width: 600px; height:100%; margin:0 auto;}
+.h_iframe {position: relative; padding-top: 56%;}
+.h_iframe iframe {position: absolute; top:0; left:0; width:100%; height:100%;}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+a:link {
+  color: #FFF8DC;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #BDB76B;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #DC143C;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #FF4500;
+  text-decoration: none;
+}
+
+#counter {
+    font-size: x-large;
+    text-align: center;
+    text-shadow: 1px 1px 3px black, 0 0 25px red, 0 0 5px darkred;
+}
+
+/**************************************
+ * CSS and JavaScript Shy Menu Plugin *
+ **************************************/
+
+/*** Shy menu ***/
+* {
+  -moz-transition: all .4s cubic-bezier(.1,.7,.3,1);
+  -webkit-transition: all .4s cubic-bezier(.1,.7,.3,1);
+  -o-transition: all .4s cubic-bezier(.1,.7,.3,1);
+  -ms-transition: all .4s cubic-bezier(.1,.7,.3,1);
+  transition: all .4s cubic-bezier(.1,.7,.3,1);
+}
+
+ul {
+  list-style: none;
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+
+.shy-menu {
+  display: block;
+  height: 35px;
+  padding: 5px;
+  width: 35px;
+  background-color: rgba(33,40,44,.1);
+  border-bottom-right-radius: 10px;
+  color: #fff;
+}
+.shy-menu.is-open, .shy-menu:hover {
+  background-color: rgba(33,40,44,1);
+}
+
+.shy-menu.is-open {
+  height: 150px;
+  width: 100px;
+}
+
+.shy-menu-panel {
+  margin-left: -100px;
+}
+.is-open .shy-menu-panel {
+  margin-left: 0;
+}
+
+/*** Hamburger ***/
+.shy-menu-hamburger {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 54px;
+  height: 54px;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.shy-menu-hamburger > .layer {
+  background-color: #fff;
+  border-radius: 1px;
+  display: block;
+  height: 2px;
+  overflow: hidden;
+  position: absolute;
+  left: 5px;
+  width: 18px;
+}
+
+.shy-menu-hamburger .layer.top {
+  top: 9px;
+}
+.is-open .shy-menu-hamburger .layer.top {
+  top: 17px;
+  left: 5px;
+  transform: rotate(45deg);
+}
+.shy-menu-hamburger .layer.mid {
+  top: 16px;
+}
+.is-open .shy-menu-hamburger .layer.mid {
+  opacity: 0;
+  left: 0;
+}
+.shy-menu-hamburger .layer.btm {
+  top: 23px;
+}
+.is-open .shy-menu-hamburger .layer.btm {
+  top: 17px;
+  left: 5px;
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,293 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Nova+Mono);
+/* wide style sheet
+ *
+ * background = firebrick (#B22222)
+ * font = cornsilk,orangered (#FFF8DC,#FF4500)
+ * links = cornsilk,darkkhaki,crimson,orangered (#FFF8DC,#BDB76B,#DC143C,#FF4500)
+ * */
+
+html {
+    background: url('../images/clockwall.jpg') fixed no-repeat center center #B22222;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    color: #FFF8DC;
+    font-family: 'Nova Mono', Consolas, monospace;
+    margin: 20px 0px;
+}
+
+h1 {
+    background: border-box #B22222;
+    border: ridge medium;
+    display: inline-block;
+    margin: 20px 0px 0px 0px;
+    padding: 5px 25px 5px 25px;
+    font-size: xx-large;
+    z-index: 110;
+}
+
+h2 {
+    background: border-box #B22222;
+    opacity: 0.8;
+    padding: 2px;
+    font-size: x-large;
+    text-indent: 10px;
+}
+
+h3 {
+    background: border-box #B22222;
+    opacity: 0.8;
+    padding: 2px;
+    font-size: x-large;
+    text-indent: 10px;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    margin: 0 auto;
+}
+
+section {
+    float: right;
+}
+
+.h_iframe {
+    opacity: 0.9;
+}
+
+a:link {
+    color: #FFF8DC;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #BDB76B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #DC143C;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #FF4500;
+    text-decoration: none;
+}
+
+/*******************
+ * Countdown Timer *
+ *******************/
+
+#theCount {
+    background: url('../images/spiral.jpg') no-repeat center right;
+    border: 1px solid #FFF8DC;
+    min-height: 200px;
+}
+
+#counter {
+    font-size: xx-large;
+    text-align: center;
+    text-shadow: 1px 1px 3px black, 0 0 25px red, 0 0 5px darkred;
+}
+
+/*********************************************
+ * Freaken lot of CSS for one bloody tooltip *
+ *********************************************/
+
+[data-tooltip] {
+    display: inline-block;
+    position: relative;
+    cursor: help;
+    padding: 4px;
+}
+/* Tooltip styling */
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    display: none;
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    min-width: 100px;
+    text-align: center;
+    border-radius: 4px;
+}
+/* Dynamic horizontal centering */
+[data-tooltip-position="top"]:before, [data-tooltip-position="bottom"]:before {
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+/* Dynamic vertical centering */
+[data-tooltip-position="right"]:before, [data-tooltip-position="left"]:before {
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+[data-tooltip-position="top"]:before {
+    bottom: 100%;
+    margin-bottom: 6px;
+}
+[data-tooltip-position="right"]:before {
+    left: 100%;
+    margin-left: 6px;
+}
+[data-tooltip-position="bottom"]:before {
+    top: 100%;
+    margin-top: 6px;
+}
+[data-tooltip-position="left"]:before {
+    right: 100%;
+    margin-right: 6px;
+}
+
+/* Tooltip arrow styling/placement */
+[data-tooltip]:after {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+/* Dynamic horizontal centering for the tooltip */
+[data-tooltip-position="top"]:after, [data-tooltip-position="bottom"]:after {
+    left: 50%;
+    margin-left: -6px;
+}
+/* Dynamic vertical centering for the tooltip */
+[data-tooltip-position="right"]:after, [data-tooltip-position="left"]:after {
+    top: 50%;
+    margin-top: -6px;
+}
+[data-tooltip-position="top"]:after {
+    bottom: 100%;
+    border-width: 6px 6px 0;
+    border-top-color: #000;
+}
+[data-tooltip-position="right"]:after {
+    left: 100%;
+    border-width: 6px 6px 6px 0;
+    border-right-color: #000;
+}
+[data-tooltip-position="bottom"]:after {
+    top: 100%;
+    border-width: 0 6px 6px;
+    border-bottom-color: #000;
+}
+[data-tooltip-position="left"]:after {
+    right: 100%;
+    border-width: 6px 0 6px 6px;
+    border-left-color: #000;
+}
+/* Show the tooltip when hovering */
+[data-tooltip]:hover:before, [data-tooltip]:hover:after {
+    display: block;
+    z-index: 50;
+}
+/**************************************
+ * CSS and JavaScript Shy Menu Plugin *
+ **************************************/
+
+/*** Shy menu ***/
+* {
+    -moz-transition: all .4s cubic-bezier(.1,.7,.3,1);
+    -webkit-transition: all .4s cubic-bezier(.1,.7,.3,1);
+    -o-transition: all .4s cubic-bezier(.1,.7,.3,1);
+    -ms-transition: all .4s cubic-bezier(.1,.7,.3,1);
+    transition: all .4s cubic-bezier(.1,.7,.3,1);
+}
+
+ul {
+    list-style: none;
+    /*margin: 0 0 0 15px;*/
+    padding: 0;
+}
+
+.shy-menu {
+    display: block;
+    height: 35px;
+    padding: 5px;
+    width: 35px;
+    background-color: #B22222;
+    border-bottom-right-radius: 10px;
+    color: #DC143C;
+    position: absolute;
+    z-index: 100;
+}
+.shy-menu.is-open, .shy-menu:hover {
+    background-color: rgba(33,40,44,1);
+}
+
+.shy-menu.is-open {
+    height: 150px;
+    width: 100px;
+}
+
+.shy-menu-panel {
+    margin-left: -100px;
+}
+.is-open .shy-menu-panel {
+    margin-left: 0;
+}
+
+/*** Hamburger ***/
+.shy-menu-hamburger {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 54px;
+    height: 54px;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.shy-menu-hamburger > .layer {
+    background-color: #fff;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    overflow: hidden;
+    position: absolute;
+    left: 5px;
+    width: 18px;
+}
+
+.shy-menu-hamburger .layer.top {
+    top: 9px;
+}
+.is-open .shy-menu-hamburger .layer.top {
+    top: 17px;
+    left: 5px;
+    transform: rotate(45deg);
+}
+.shy-menu-hamburger .layer.mid {
+    top: 16px;
+}
+.is-open .shy-menu-hamburger .layer.mid {
+    opacity: 0;
+    left: 0;
+}
+.shy-menu-hamburger .layer.btm {
+    top: 23px;
+}
+.is-open .shy-menu-hamburger .layer.btm {
+    top: 17px;
+    left: 5px;
+    transform: rotate(-45deg);
+}

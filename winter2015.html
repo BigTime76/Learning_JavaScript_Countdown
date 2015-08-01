@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Count Down Clock">
+        <meta name="keywords" content="HTML,CSS,JavaScript,XML">
+        <meta name="author" content="BigTime">
+        <link rel="icon" href="images/clock.png" type="image/png">
+        <link id="myCSS" type="text/css" rel="stylesheet" href="css\mystyles.css" >
+        <title>Countdown Clocks</title>
+    </head>
+    <body>
+        <header>
+            <h1>Coundown Clocks</h1>
+        </header>
+        <nav>
+            <div class="shy-menu">
+                <a class="shy-menu-hamburger"> <span class="layer top"></span> <span class="layer mid"></span> <span class="layer btm"></span> </a>
+                <div class="shy-menu-panel">
+                    <ul>
+                        <li>
+                            <a href="index.html">Doomsday</a>
+                        </li>
+                        <li>
+                            <a href="fall2015.html">Fall 2015</a>
+                        </li>
+                        <li>
+                            <a href="winter2015.html">Winter 2015</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/jrpeirce" target="_blank">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu open">
+                <a class="hamburger"> <span class="layer top"></span> <span class="layer mid"></span> <span class="layer btm"></span> </a>
+            </div>
+        </nav>
+        <section>
+            <article>
+                <h2>December 22nd, 2015 -- Winter Begins</h2>
+                <div class="wrapper">
+                    <div class="h_iframe">
+                        <span data-tooltip="I am here, click me!" data-tooltip-position="left">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/HgY3rOOascY"
+                            frameborder="0">
+                                Winter 2015
+                            </iframe></span>
+                    </div>
+                </div>
+                <div id="theCount">
+                    <div id="countHeading">
+                        <h3>Time Left:</h3>
+                    </div>
+                    <div id="counter"></div>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <p>
+                &copy; 2015 <a href="mailto:bigtime_1976@hotmail.com">Jerry R. Peirce</a>.
+            </p>
+            <pre>This website printed with recycled pixels.
+    Resizing code avalible for mobile friendly mode.</pre>
+        </footer>
+        <!-- todo: Include JQuery UI? -->
+        <script type="text/javascript">
+            var countZone = 0;
+            var countYear = 2015;
+            var countMonth = 11;
+            var countDay = 22;
+            var countHour = 0;
+            var countMin = 0;
+            var countSec = 0;
+        </script>
+        <script src="scripts/jquery-2.1.4.js" type="text/javascript"></script>
+        <script src="scripts/jquery.plugin.js" type="text/javascript"></script>
+        <script src="scripts/jquery.countdown.js" type="text/javascript"></script>
+        <script src="scripts/myscript.js" type="text/javascript"></script>
+    </body>
+</html>
