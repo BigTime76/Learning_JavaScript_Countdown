@@ -28,6 +28,7 @@ h1 {
     margin: 20px 0px 0px 0px;
     padding: 5px 25px 5px 25px;
     font-size: xx-large;
+    text-shadow: 0 0 20px #FF4500;
     z-index: 110;
 }
 
@@ -64,6 +65,11 @@ section {
 a:link {
     color: #FFF8DC;
     text-decoration: none;
+    -webkit-transition: text-shadow 1s ease-in-out 0.2s;
+    -moz-transition: text-shadow 1s ease-in-out 0.2s;
+    -ms-transition: text-shadow 1s ease-in-out 0.2s;
+    -o-transition: text-shadow 1s ease-in-out 0.2s;
+    transition: text-shadow 1s ease-in-out 0.2s;
 }
 
 a:visited {
@@ -74,6 +80,7 @@ a:visited {
 a:hover {
     color: #DC143C;
     text-decoration: underline;
+    text-shadow: #343434 1px 1px 1px, 0 0 10px #FFF8DC, 0 0 20px #FFF8DC, 0 0 30px #FFF8DC, 0 0 40px #FF4500, 0 0 70px #FF4500, 0 0 80px #FF4500, 0 0 100px #DC143C, 0 0 150px #DC143C;
 }
 
 a:active {
@@ -232,8 +239,8 @@ ul {
 }
 
 .shy-menu.is-open {
-    height: 150px;
-    width: 100px;
+    height: 200px;
+    width: 150px;
 }
 
 .shy-menu-panel {
