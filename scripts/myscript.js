@@ -1,6 +1,6 @@
 // "use strict";
 
-/**
+/*
  *
  * todo: RESIZE IS PROOF OF CONCEPT ONLY!
  * Eventually switch this over to CSS3 standard
@@ -13,9 +13,9 @@ $(window).resize(function() {
     windowsize = $(window).width();
 
     if (windowsize < 600) {
-        document.getElementById("myCSS").setAttribute("href", "css/narrow.css");
-    } else {
-        document.getElementById("myCSS").setAttribute("href", "css/mystyles.css");
+        $("#myCSS").attr("href", "css/narrow.css");
+            } else {
+        $("#myCSS").attr("href", "css/mystyles.css");
     }
 });
 
@@ -84,6 +84,8 @@ function initDropDowns(allMenus) {
         return false;
     });
 }
+
+
 
 /**
  * @author BigTime

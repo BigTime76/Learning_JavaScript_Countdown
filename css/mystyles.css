@@ -19,6 +19,11 @@ body {
     color: #FFF8DC;
     font-family: 'Nova Mono', Consolas, monospace;
     margin: 20px 0px;
+    -webkit-animation: fadein 7s;
+    -moz-animation: fadein 9s;
+    -ms-animation: fadein 7s;
+    -o-animation: fadein 7s;
+    animation: fadein 7s;
 }
 
 h1 {
